@@ -1,24 +1,10 @@
-<doctype html>
-<header>
-    <meta charset="UTF-8">
-    <html lang="en">
-</header>
 <?php
+$menu = [ [ 'name' => 'home', 'link' => 'home' ],
+          [ 'name' => 'login', 'link' => 'login'],
+          [  'name' => 'logout',  'link' => 'logout'],
+          [ 'name' => 'signin', 'link' => 'signin'],
+        ];
 
-$menu = [
-    ['label' => 'home', 'href' => 'home.php'],
-    ['label' => 'begin', 'href' => 'begin.php'],
-    ['label' => 'déconnexion', 'href' => 'déconnexion.php'],
-    ['label' => 'forume', 'href' => 'forume.php'], 
-    ['label' => 'process', 'href' => 'process.php']  
-];
-
-foreach($menu as $link){ 
-
-?>
-<a href='<?= $link['href']?>'><?= $link['label']?></a>
-<?php
+foreach($menu as $me) {
+    echo("<a href='index.php?page=".$me['link']."'>".$me['name']."</a>");
 }
-?>
-
-
