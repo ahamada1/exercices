@@ -1,23 +1,20 @@
 <?php
-session_start();
-?>
+session_start() ?>
 
-<h1>Page Login</h1>
+<title>"Page d'inscription"</title>
 
+<h1>Je suis sur la page d'inscription</h1>
 
-<form action="traitement_donnees.php" method="post"> 
-    <label for="id">id:</label>  <br>
-    <input type="id" id="" name="id"> <br>
+<form action="traitement_inscriptions.php" method="post"> 
+    <label for="nom">Nom et Prenom:</label><br>
+    <input type="nom" id="" name="nom"><br>
     <label for="password">Password:</label><br>
-    <input type="password" id="1203" name="password"><br>
-    <button type="submit">Envoyer</button>  <br>
+    <input type="password" id="" name="password"><br>
+    <button type="submit">Envoyer</button><br>
 </form>
-
-
 
 <?php
 require 'config.php';
-
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') { 
     $nom = $_POST['nom'];
@@ -29,4 +26,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Location: index.php'); 
     exit;
 } ?>
-
