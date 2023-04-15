@@ -1,4 +1,6 @@
 <?php
 session_start();
-require_once('header.html');
+require('db.php');
+$page = isset($_GET['page']) ? $_GET['page'] : 'default';
+require("pages/$page.php");
 

@@ -1,10 +1,9 @@
-<?php
+<?php 
+$get = file_get_contents('http://localhost/iutRivesDeSeine/twitter/API.php?api=userposts');
+$posts = json_decode($get);
 
-echo(
-    "<!doctype html>
-    <form method='POST' action=''>
-        <input type='text' name='content' placeholder='your message...'>
-        <button type='submit'>create post</button>
-    </form>"
-);
-    
+foreach($posts as $post) {
+    echo($post->idUser);
+    echo($post->content);
+    echo($post->date);
+}
