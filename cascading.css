@@ -1,0 +1,26 @@
+body, ul{
+    margin:0;
+}
+
+ul{
+    height: 50px;
+    background-color: rgb(76, 66, 163);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+ul li{list-style: none;
+}
+
+ul a {
+    color:black;
+    text-decoration: none;
+
+}
+div{
+    border: 12px;
+    border-radius: 5px;
+}
